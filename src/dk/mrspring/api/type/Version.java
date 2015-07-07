@@ -1,5 +1,6 @@
-package dk.mrspring.api;
+package dk.mrspring.api.type;
 
+import dk.mrspring.api.Versions;
 import dk.mrspring.api.json.Populator;
 import dk.mrspring.api.json.VersionJsonWrapper;
 

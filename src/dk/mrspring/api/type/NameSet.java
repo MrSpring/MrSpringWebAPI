@@ -1,4 +1,4 @@
-package dk.mrspring.api;
+package dk.mrspring.api.type;
 
 /**
  * Created by MrSpring on 05-07-2015 for MC Music Player.

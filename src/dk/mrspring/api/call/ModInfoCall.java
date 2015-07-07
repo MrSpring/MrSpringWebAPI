@@ -1,7 +1,7 @@
 package dk.mrspring.api.call;
 
 import dk.mrspring.api.AbstractApiCall;
-import dk.mrspring.api.Mod;
+import dk.mrspring.api.type.Mod;
 import dk.mrspring.api.json.ModInfoJsonWrapper;
 
 /**

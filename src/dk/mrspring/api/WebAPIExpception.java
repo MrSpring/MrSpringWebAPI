@@ -5,13 +5,13 @@ package dk.mrspring.api;
  */
 public class WebAPIExpception extends Exception
 {
-    public WebAPIExpception(Error error, String... parameters)
+    public WebAPIExpception(Error error, String errorDesc)
     {
-        super(String.format(error.description, parameters));
+        super(errorDesc);
     }
 
-    public WebAPIExpception(int errorId, String... parameters)
+    public WebAPIExpception(int errorId, String errorDesc)
     {
-        this(Error.fromId(errorId), parameters);
+        this(Error.fromId(errorId), errorDesc);
     }
 }

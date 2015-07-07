@@ -3,6 +3,10 @@ package dk.mrspring.api;
 import dk.mrspring.api.call.GetChangeLogCall;
 import dk.mrspring.api.call.GetVersionCall;
 import dk.mrspring.api.call.IsLatestVersionCall;
+import dk.mrspring.api.type.ChangeLog;
+import dk.mrspring.api.type.LatestVersion;
+import dk.mrspring.api.type.Mod;
+import dk.mrspring.api.type.Version;
 
 import java.io.IOException;
 

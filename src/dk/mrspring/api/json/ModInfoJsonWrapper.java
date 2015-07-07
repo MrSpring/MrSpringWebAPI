@@ -1,6 +1,6 @@
 package dk.mrspring.api.json;
 
-import dk.mrspring.api.Mod;
+import dk.mrspring.api.type.Mod;
 
 /**
  * Created by MrSpring on 05-07-2015 for MC Music Player.

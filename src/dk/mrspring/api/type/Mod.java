@@ -1,4 +1,4 @@
-package dk.mrspring.api;
+package dk.mrspring.api.type;
 
 import dk.mrspring.api.json.ModInfoJsonWrapper;
 import dk.mrspring.api.json.Populator;

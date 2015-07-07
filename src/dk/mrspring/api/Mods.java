@@ -1,6 +1,7 @@
 package dk.mrspring.api;
 
 import dk.mrspring.api.call.ModInfoCall;
+import dk.mrspring.api.type.Mod;
 
 import java.io.IOException;
 

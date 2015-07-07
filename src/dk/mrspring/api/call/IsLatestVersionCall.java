@@ -1,7 +1,7 @@
 package dk.mrspring.api.call;
 
 import dk.mrspring.api.AbstractApiCall;
-import dk.mrspring.api.LatestVersion;
+import dk.mrspring.api.type.LatestVersion;
 import dk.mrspring.api.json.IsLatestVersionJsonWrapper;
 
 /**

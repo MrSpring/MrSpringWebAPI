@@ -34,7 +34,7 @@ public class Caller
             Gson gson = new Gson();
             T callResult = gson.fromJson(jsonResult, type);
             if (callResult.didError())
-                throw new WebAPIExpception(callResult.getError(), parameters);
+                throw new WebAPIExpception(callResult.getError(), callResult.getErrorDescription());
             callResult.onCallFinished();
             return callResult;
         } catch (MalformedURLException e)
