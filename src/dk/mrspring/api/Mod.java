@@ -66,7 +66,6 @@ public class Mod implements Populator<ModInfoJsonWrapper>
     @Override
     public Mod populate(ModInfoJsonWrapper jsonWrapper)
     {
-        System.out.println("Populating!");
         this.name = new NameSet(jsonWrapper.short_name, jsonWrapper.full_name);
         try
         {
