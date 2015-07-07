@@ -1,6 +1,6 @@
 package dk.mrspring.api.type;
 
-import dk.mrspring.api.json.ModInfoJsonWrapper;
+import dk.mrspring.api.json.GetModInfoWrapper;
 import dk.mrspring.api.json.Populator;
 
 import java.net.MalformedURLException;
@@ -9,7 +9,7 @@ import java.net.URL;
 /**
  * Created by MrSpring on 05-07-2015 for MC Music Player.
  */
-public class Mod implements Populator<ModInfoJsonWrapper>
+public class Mod implements Populator<GetModInfoWrapper>
 {
     NameSet name;
     Dependency dependency;
@@ -64,7 +64,7 @@ public class Mod implements Populator<ModInfoJsonWrapper>
     }
 
     @Override
-    public Mod populate(ModInfoJsonWrapper jsonWrapper)
+    public Mod populate(GetModInfoWrapper jsonWrapper)
     {
         this.name = new NameSet(jsonWrapper.short_name, jsonWrapper.full_name);
         try

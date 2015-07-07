@@ -1,19 +1,19 @@
 package dk.mrspring.api.type;
 
-import dk.mrspring.api.json.ChangeLogJsonWrapper;
+import dk.mrspring.api.json.GetChangeLogWrapper;
 import dk.mrspring.api.json.Populator;
 
 /**
  * Created by MrSpring on 06-07-2015 for MC Music Player.
  */
-public class ChangeLog implements Populator<ChangeLogJsonWrapper>
+public class ChangeLog implements Populator<GetChangeLogWrapper>
 {
     String mod;
     String version;
     String[] changeLog;
 
     @Override
-    public ChangeLog populate(ChangeLogJsonWrapper jsonWrapper)
+    public ChangeLog populate(GetChangeLogWrapper jsonWrapper)
     {
         this.mod = jsonWrapper.mod;
         this.version = jsonWrapper.version;

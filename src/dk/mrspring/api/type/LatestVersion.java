@@ -1,12 +1,12 @@
 package dk.mrspring.api.type;
 
-import dk.mrspring.api.json.IsLatestVersionJsonWrapper;
+import dk.mrspring.api.json.CheckUpdateWrapper;
 import dk.mrspring.api.json.Populator;
 
 /**
  * Created by MrSpring on 06-07-2015 for MC Music Player.
  */
-public class LatestVersion implements Populator<IsLatestVersionJsonWrapper>
+public class LatestVersion implements Populator<CheckUpdateWrapper>
 {
     Version latest;
     boolean isLatest;
@@ -39,7 +39,7 @@ public class LatestVersion implements Populator<IsLatestVersionJsonWrapper>
     }
 
     @Override
-    public LatestVersion populate(IsLatestVersionJsonWrapper jsonWrapper)
+    public LatestVersion populate(CheckUpdateWrapper jsonWrapper)
     {
         this.latest = new Version().populate(jsonWrapper.getLatest());
         this.isLatest = jsonWrapper.is_latest;

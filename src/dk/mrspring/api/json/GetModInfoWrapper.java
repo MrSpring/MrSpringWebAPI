@@ -5,7 +5,7 @@ import dk.mrspring.api.type.Mod;
 /**
  * Created by MrSpring on 05-07-2015 for MC Music Player.
  */
-public class ModInfoJsonWrapper implements IJsonWrapper<Mod>
+public class GetModInfoWrapper implements IJsonWrapper<Mod>
 {
     public String full_name = "";
     public String short_name = "";

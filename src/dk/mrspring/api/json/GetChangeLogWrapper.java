@@ -5,7 +5,7 @@ import dk.mrspring.api.type.ChangeLog;
 /**
  * Created by MrSpring on 06-07-2015 for MC Music Player.
  */
-public class ChangeLogJsonWrapper implements IJsonWrapper<ChangeLog>
+public class GetChangeLogWrapper implements IJsonWrapper<ChangeLog>
 {
     public String mod;
     public String version;

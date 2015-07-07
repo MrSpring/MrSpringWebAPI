@@ -2,7 +2,7 @@ package dk.mrspring.api.type;
 
 import dk.mrspring.api.Versions;
 import dk.mrspring.api.json.Populator;
-import dk.mrspring.api.json.VersionJsonWrapper;
+import dk.mrspring.api.json.GetVersionWrapper;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -10,7 +10,7 @@ import java.net.URL;
 /**
  * Created by MrSpring on 06-07-2015 for MC Music Player.
  */
-public class Version implements Populator<VersionJsonWrapper>
+public class Version implements Populator<GetVersionWrapper>
 {
     String name;
     String mod;
@@ -66,7 +66,7 @@ public class Version implements Populator<VersionJsonWrapper>
     }
 
     @Override
-    public Version populate(VersionJsonWrapper wrap)
+    public Version populate(GetVersionWrapper wrap)
     {
         this.name = wrap.version.name;
         this.mod = wrap.mod;

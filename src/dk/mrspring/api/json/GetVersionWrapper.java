@@ -5,7 +5,7 @@ import dk.mrspring.api.type.Version;
 /**
  * Created by MrSpring on 06-07-2015 for MC Music Player.
  */
-public class VersionJsonWrapper implements IJsonWrapper<Version>
+public class GetVersionWrapper implements IJsonWrapper<Version>
 {
     public String mod;
     public String version_name;
