@@ -7,6 +7,6 @@ import dk.mrspring.api.json.CheckUpdateWrapper;
 /**
  * Created by MrSpring on 06-07-2015 for MC Music Player.
  */
-public class IsLatestVersionCall extends AbstractApiCall<CheckUpdateWrapper, LatestVersion>
+public class UpdateCheckCall extends AbstractApiCall<CheckUpdateWrapper, LatestVersion>
 {
 }

@@ -2,7 +2,7 @@ package dk.mrspring.api;
 
 import dk.mrspring.api.call.GetChangeLogCall;
 import dk.mrspring.api.call.GetVersionCall;
-import dk.mrspring.api.call.IsLatestVersionCall;
+import dk.mrspring.api.call.UpdateCheckCall;
 import dk.mrspring.api.type.ChangeLog;
 import dk.mrspring.api.type.LatestVersion;
 import dk.mrspring.api.type.Mod;
@@ -40,7 +40,7 @@ public class Versions
     {
         try
         {
-            IsLatestVersionCall call = Caller.makeCall(Caller.IS_LATEST_VERSION, IsLatestVersionCall.class, "mod=" + mod, "version=" + version);
+            UpdateCheckCall call = Caller.makeCall(Caller.IS_LATEST_VERSION, UpdateCheckCall.class, "mod=" + mod, "version=" + version);
             return call.getResult();
         } catch (IOException e)
         {
