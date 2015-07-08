@@ -16,6 +16,11 @@ import java.io.IOException;
  */
 public class Versions
 {
+    public static ChangeLog getChangeLog(Version version)
+    {
+        return getChangeLog(version.getMod(), version.getName());
+    }
+
     public static ChangeLog getChangeLog(String mod, String version)
     {
         try
