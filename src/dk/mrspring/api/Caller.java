@@ -57,6 +57,8 @@ public class Caller
         for (int i = 0; i < parameters.length; i++)
         {
             String str = parameters[i];
+            if (str == null || str.isEmpty())
+                continue;
             query.append(str);
             if (i + 1 < parameters.length)
                 query.append("&");

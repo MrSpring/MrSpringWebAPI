@@ -58,11 +58,11 @@ public class Versions
         return getLatestVersion(mod.getShortName(), version);
     }
 
-    public static Version[] getVersions(String mod)
+    public static Version[] getVersions(String mod, boolean simple)
     {
         try
         {
-            GetVersionsCall call = Caller.makeCall(Caller.GET_VERSIONS, GetVersionsCall.class, "mod=" + mod);
+            GetVersionsCall call = Caller.makeCall(Caller.GET_VERSIONS, GetVersionsCall.class, "mod=" + mod, simple ? "s" : "");
             return call.getResult();
         } catch (IOException e)
         {
@@ -74,9 +74,19 @@ public class Versions
         return null;
     }
 
+    public static Version[] getVersions(Mod mod, boolean simple)
+    {
+        return getVersions(mod.getShortName(), simple);
+    }
+
+    public static Version[] getVersions(String mod)
+    {
+        return getVersions(mod, false);
+    }
+
     public static Version[] getVersions(Mod mod)
     {
-        return getVersions(mod.getShortName());
+        return getVersions(mod.getShortName(), false);
     }
 
     public static Version getVersion(String mod, String version)
