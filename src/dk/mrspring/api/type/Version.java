@@ -1,8 +1,9 @@
 package dk.mrspring.api.type;
 
 import dk.mrspring.api.Versions;
-import dk.mrspring.api.json.Populator;
 import dk.mrspring.api.json.GetVersionWrapper;
+import dk.mrspring.api.json.GetVersionsWrapper;
+import dk.mrspring.api.json.Populator;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -65,24 +66,37 @@ public class Version implements Populator<GetVersionWrapper>
         this.changeLog = log.getChangeLog();
     }
 
+    public Version populate(GetVersionsWrapper wrapper, GetVersionWrapper.VersionWrapper wrap)
+    {
+        this.name = wrap.name;
+        this.mod = wrapper.mod;
+        this.populate(wrap);
+        return this;
+    }
+
+    private void populate(GetVersionWrapper.VersionWrapper wrap)
+    {
+        this.mcVersion = wrap.mc_version;
+        try
+        {
+            if (wrap.direct_download_url != null)
+                this.directDownload = new URL(wrap.direct_download_url);
+            if (wrap.adfly_download_url != null) this.adflyUrl = new URL(wrap.adfly_download_url);
+            if (wrap.source_url != null) this.sourceUrl = new URL(wrap.source_url);
+            if (wrap.changelog_url != null) this.changeLogUrl = new URL(wrap.changelog_url);
+            if (wrap.release_date != null) this.releaseDate = wrap.release_date;
+        } catch (MalformedURLException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public Version populate(GetVersionWrapper wrap)
     {
         this.name = wrap.version.name;
         this.mod = wrap.mod;
-        this.mcVersion = wrap.version.mc_version;
-        try
-        {
-            if (wrap.version.direct_download_url != null)
-                this.directDownload = new URL(wrap.version.direct_download_url);
-            if (wrap.version.adfly_download_url != null) this.adflyUrl = new URL(wrap.version.adfly_download_url);
-            if (wrap.version.source_url != null) this.sourceUrl = new URL(wrap.version.source_url);
-            if (wrap.version.changelog_url != null) this.changeLogUrl = new URL(wrap.version.changelog_url);
-            if (wrap.version.release_date != null) this.releaseDate = wrap.version.release_date;
-        } catch (MalformedURLException e)
-        {
-            e.printStackTrace();
-        }
+        this.populate(wrap.version);
         return this;
     }
 }

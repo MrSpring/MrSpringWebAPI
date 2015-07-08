@@ -2,6 +2,7 @@ package dk.mrspring.api;
 
 import dk.mrspring.api.call.GetChangeLogCall;
 import dk.mrspring.api.call.GetVersionCall;
+import dk.mrspring.api.call.GetVersionsCall;
 import dk.mrspring.api.call.UpdateCheckCall;
 import dk.mrspring.api.type.ChangeLog;
 import dk.mrspring.api.type.LatestVersion;
@@ -59,6 +60,17 @@ public class Versions
 
     public static Version[] getVersions(String mod)
     {
+        try
+        {
+            GetVersionsCall call = Caller.makeCall(Caller.GET_VERSIONS, GetVersionsCall.class, "mod=" + mod);
+            return call.getResult();
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        } catch (WebAPIExpception webAPIExpception)
+        {
+            webAPIExpception.printStackTrace();
+        }
         return null;
     }
 

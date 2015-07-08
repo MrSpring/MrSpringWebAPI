@@ -18,6 +18,7 @@ public class Caller
     public static final String IS_LATEST_VERSION = "mod.check_update";
     public static final String GET_CHANGE_LOG = "mod.get_changelog";
     public static final String GET_LANGUAGES = "mod.get_languages";
+    public static final String GET_VERSIONS = "mod.get_versions";
 
     public static AbstractApiCall call(String function, String... parameters) throws IOException, WebAPIExpception
     {
