@@ -5,11 +5,10 @@ package dk.mrspring.api;
  */
 public class MCVersion
 {
-    int[] version;
+    int[] version = new int[3];
 
     public MCVersion(int release, int major, int minor)
     {
-        this.version = new int[3];
         this.version[0] = release;
         this.version[1] = major;
         this.version[2] = minor;
