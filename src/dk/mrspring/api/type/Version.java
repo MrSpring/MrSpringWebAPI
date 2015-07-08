@@ -1,5 +1,6 @@
 package dk.mrspring.api.type;
 
+import dk.mrspring.api.MCVersion;
 import dk.mrspring.api.Versions;
 import dk.mrspring.api.json.GetVersionWrapper;
 import dk.mrspring.api.json.GetVersionsWrapper;
@@ -15,7 +16,7 @@ public class Version implements Populator<GetVersionWrapper>
 {
     String name;
     String mod;
-    String mcVersion;
+    MCVersion mcVersion;
     String releaseDate;
     URL directDownload;
     URL adflyUrl;
@@ -33,7 +34,7 @@ public class Version implements Populator<GetVersionWrapper>
         return mod;
     }
 
-    public String getMcVersion()
+    public MCVersion getMcVersion()
     {
         return mcVersion;
     }
@@ -76,7 +77,7 @@ public class Version implements Populator<GetVersionWrapper>
 
     private void populate(GetVersionWrapper.VersionWrapper wrap)
     {
-        this.mcVersion = wrap.mc_version;
+        this.mcVersion = new MCVersion(wrap.mc_version);
         try
         {
             if (wrap.direct_download_url != null)
