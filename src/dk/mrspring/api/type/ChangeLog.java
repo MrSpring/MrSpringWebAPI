@@ -22,6 +22,16 @@ public class ChangeLog implements Populator<GetChangeLogWrapper>
         return this;
     }
 
+    public String getVersion()
+    {
+        return version;
+    }
+
+    public String getMod()
+    {
+        return mod;
+    }
+
     public String[] getChangeLog()
     {
         return changeLog;

@@ -67,6 +67,11 @@ public class Version implements Populator<GetVersionWrapper>
         this.changeLog = log.getChangeLog();
     }
 
+    public boolean isChangeLogLoaded()
+    {
+        return changeLog != null;
+    }
+
     public Version populate(GetVersionsWrapper wrapper, GetVersionWrapper.VersionWrapper wrap)
     {
         this.name = wrap.name;
