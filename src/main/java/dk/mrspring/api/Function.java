@@ -10,6 +10,7 @@ public class Function
     public static final Function GET_MOD_INFO = new Function("mod.get_info", Call.ModInfoCall.class);
     public static final Function GET_MOD_VERSIONS = new Function("mod.get_versions", Call.GetVersionsCall.class);
     public static final Function GET_MOD_VERSION = new Function("mod.get_version", Call.GetVersionCall.class);
+    public static final Function CHECK_UPDATE = new Function("mod.check_update", Call.CheckUpdateCall.class);
 
     public String function;
     public Class<? extends Call> callClass;

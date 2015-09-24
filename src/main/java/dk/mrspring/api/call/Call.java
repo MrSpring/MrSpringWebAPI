@@ -1,9 +1,7 @@
 package dk.mrspring.api.call;
 
-import dk.mrspring.api.json.IJsonWrapper;
-import dk.mrspring.api.json.GetVersionWrapper;
-import dk.mrspring.api.json.GetVersionsWrapper;
-import dk.mrspring.api.json.ModInfoWrapper;
+import dk.mrspring.api.json.*;
+import dk.mrspring.api.type.LatestVersion;
 import dk.mrspring.api.type.Mod;
 import dk.mrspring.api.type.Version;
 import dk.mrspring.api.type.Versions;
@@ -72,6 +70,10 @@ public class Call<T extends IJsonWrapper<K>, K>
     }
 
     public static class GetVersionCall extends Call<GetVersionWrapper, Version>
+    {
+    }
+
+    public static class CheckUpdateCall extends Call<CheckUpdateWrapper, LatestVersion>
     {
     }
 }
