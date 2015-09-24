@@ -1,6 +1,5 @@
 package dk.mrspring.api.type;
 
-import com.sun.deploy.xml.XMLNode;
 import dk.mrspring.api.Function;
 import dk.mrspring.api.Parameter;
 import dk.mrspring.api.call.Call;
@@ -25,7 +24,6 @@ public class Version implements Populate<Version, VersionWrapper>
     private String[] changeLog;
     private boolean isSimple;
 
-    @Override
     public Version populate(VersionWrapper type)
     {
         return this.populate(type, null);

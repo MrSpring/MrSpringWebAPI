@@ -1,4 +1,4 @@
-package dk.mrspring.api;
+package dk.mrspring.api.json;
 
 /**
  * Created on 06-09-2015 for LiteLoader.

@@ -1,6 +1,5 @@
 package dk.mrspring.api.json;
 
-import dk.mrspring.api.IJsonWrapper;
 import dk.mrspring.api.type.Version;
 
 /**
@@ -29,7 +28,6 @@ public class VersionWrapper implements IJsonWrapper<Version>
         return new Version().populate(this, modId);
     }
 
-    @Override
     public Version decode()
     {
         return decode(null);

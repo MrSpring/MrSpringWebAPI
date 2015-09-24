@@ -1,6 +1,5 @@
 package dk.mrspring.api.json;
 
-import dk.mrspring.api.IJsonWrapper;
 import dk.mrspring.api.type.Version;
 
 /**

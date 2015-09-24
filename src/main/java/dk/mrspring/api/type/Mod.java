@@ -85,7 +85,6 @@ public class Mod implements Populate<Mod, ModInfoWrapper>
         return sourceUrl != null;
     }
 
-    @Override
     public Mod populate(ModInfoWrapper type)
     {
         this.modId = type.mod_id;

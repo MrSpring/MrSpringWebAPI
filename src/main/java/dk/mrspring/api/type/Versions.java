@@ -41,7 +41,6 @@ public class Versions implements Populate<Versions, GetVersionsWrapper>
         else return null;
     }
 
-    @Override
     public Versions populate(GetVersionsWrapper type)
     {
         this.modId = type.mod_id;

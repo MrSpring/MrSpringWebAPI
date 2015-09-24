@@ -1,6 +1,6 @@
 package dk.mrspring.api.call;
 
-import dk.mrspring.api.IJsonWrapper;
+import dk.mrspring.api.json.IJsonWrapper;
 import dk.mrspring.api.json.GetVersionWrapper;
 import dk.mrspring.api.json.GetVersionsWrapper;
 import dk.mrspring.api.json.ModInfoWrapper;
